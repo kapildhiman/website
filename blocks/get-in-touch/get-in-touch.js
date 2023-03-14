@@ -12,3 +12,11 @@ const mapIframe = document.createElement('iframe');
 mapIframe.src = mapUrl.href;
 mapIframe.setAttribute('loading', 'lazy');
 mapUrl.parentNode.replaceChild(mapIframe, mapUrl);
+
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        console.log('there');
+        const intersecting = entry.isIntersecting
+    })
+})
