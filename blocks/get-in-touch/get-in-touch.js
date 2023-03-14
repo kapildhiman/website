@@ -12,13 +12,3 @@ const mapIframe = document.createElement('iframe');
 mapIframe.src = mapUrl.href;
 mapIframe.setAttribute('loading', 'lazy');
 mapUrl.parentNode.replaceChild(mapIframe, mapUrl);
-
-
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        const intersecting = entry.isIntersecting
-        //entry.target.style.backgroundColor = intersecting ? "blue" : "orange"
-    })
-})
-
-document.querySelectorAll('.get-in-touch-wrapper > iframe');
